@@ -34,7 +34,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ssoready/ssoready-api
+          images: howdygo/ssoready-api
           tags: |
             type=sha
 
@@ -52,7 +52,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-name: index.docker.io/ssoready/ssoready-api
+          subject-name: index.docker.io/howdygo/ssoready-api
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
@@ -79,7 +79,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ssoready/ssoready-auth
+          images: howdygo/ssoready-auth
           tags: |
             type=sha
 
@@ -97,7 +97,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-name: index.docker.io/ssoready/ssoready-auth
+          subject-name: index.docker.io/howdygo/ssoready-auth
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
@@ -124,7 +124,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ssoready/ssoready-migrate
+          images: howdygo/ssoready-migrate
           tags: |
             type=sha
 
@@ -142,7 +142,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-name: index.docker.io/ssoready/ssoready-migrate
+          subject-name: index.docker.io/howdygo/ssoready-migrate
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
@@ -169,7 +169,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ssoready/ssoready-app
+          images: howdygo/ssoready-app
           tags: |
             type=sha
 
@@ -187,7 +187,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-name: index.docker.io/ssoready/ssoready-app
+          subject-name: index.docker.io/howdygo/ssoready-app
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
@@ -214,7 +214,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ssoready/ssoready-admin
+          images: howdygo/ssoready-admin
           tags: |
             type=sha
 
@@ -232,6 +232,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-name: index.docker.io/ssoready/ssoready-admin
+          subject-name: index.docker.io/howdygo/ssoready-admin
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
