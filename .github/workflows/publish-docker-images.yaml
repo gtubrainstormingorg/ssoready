@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'howdygo'
     tags:
       - 'v*'
 permissions:
